@@ -1,0 +1,126 @@
+/* Directivas */
+        @charset "utf-8";
+
+/* Inicializar y contenedores principales */        
+*{  margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* Incluir Siempre como inicialización*/
+    box-sizing: border-box;
+}
+
+/* Equivale a html en nuestro caso */
+:root{  
+    font-family: "Arial", sans-serif;
+    font-size: 16px; /* 1rem = 16px */
+    background-image: url("img/O5GLLH0.jpg");
+    background-attachment: fixed;
+}
+            
+body{
+    width: calc(80% - 1rem);
+    margin: 0 auto;
+    background-color: rgba(100%, 100%, 100%, 0.7);
+    padding: 3rem;
+}
+
+/* Header */          
+header h1{ 
+    -webkit-text-stroke: 2px red;
+    color: white;
+    margin: 0.5em 0;
+    transform: rotate(3deg) scale(1.2, 1.2) translate(2em, 0);
+}
+        
+/* Efecto al pasar por encima */
+        
+/* NAV: Botonera */
+/* Botonera 1: Horizontal */
+nav ul#botonera1 {
+    list-style: none;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+nav ul#botonera1 li {
+    display: inline-block;
+    margin-right: 1.5em;
+}
+
+ul#botonera1 li a {
+    display: block; /* Permite que el enlace ocupe todo el ancho del li*/
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    width: 10em;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0.3em 0.3em 0.2em black;
+}
+
+ul#botonera1 li a:hover {
+    background-color: red;
+    color: white;
+}
+
+ul#botonera1 li a:active {
+    transform: translate(2px, 2px) scale(0.9, 0.9);
+    box-shadow: 0.2em 0.2em 0.1em black;
+}
+
+/* Botonera 2: Vertical */
+nav ul#botonera2 {
+    list-style: none;
+    margin: 1rem 0rem;
+}
+
+nav ul#botonera2 li {
+    margin: 0 0 0.5em 0;
+}
+
+ul#botonera2 li a {
+    display: block; /* Permite que el enlace ocupe todo el ancho del li*/
+    background: linear-gradient(to bottom, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+    color: white;
+    font-weight: bold;
+    width: 10em;
+    text-align: center;
+    padding: 0.5em;
+    transition: transform 
+}
+
+nav ul#botonera2 li a:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0.3em 0.3em 1em rgba(255,168,76,1);
+}
+
+/* MAIN: Párrafos y Galeria */
+main section>*{
+    margin: 1rem;
+}
+        
+main div#galeria{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: grey;
+}
+        
+main div#galeria img{
+    width: 30%;
+    opacity: 0.6;
+}
+
+main div#galeria img:nth-child(1):hover{
+    width: 30%;
+    transform: rotateX(45deg) rotateY(45deg);
+    opacity: 1;
+}
+
+main div#galeria img:nth-child(2):hover{
+    width: 30%;
+    transform: skewX(-45deg);
+}
+
+/* FOOTER */        
