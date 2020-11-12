@@ -36,3 +36,9 @@ p#animado {
 * animation-timing-function
 * animation-direction
 * animation-iteration-count
+
+
+#### Shorthand
+```
+animation: name duration timing-function delay iteration-count direction fill-mode play-state
+```
