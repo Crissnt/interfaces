@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    background-color: grey;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+}
+
+/* Cabecera */
+header h1:before {
+    content: url(../img/banner.gif);
+}
+
+/* Botonera */
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    display: block;
+    width: 10rem;
+    padding: 1rem;
+    color: white;
+    background-color: red;
+    text-align: center;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: pink;
+}
+
+/* Texto */
+
+main article {
+    margin: 1rem 0;
+    column-count: 3;
+    column-gap: 2rem;
+    text-align: justify;
+}
+
+main section#ventas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+main section#ventas div.item {
+    border: 5px double blue;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+main section#ventas div.item img {
+    width: 200px;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+main section#ventas div.item img:hover {
+    opacity: 1;
+}
