@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+
+}
+
+body {
+    width: 90%;
+    max-width: 1000px;
+    min-width: 200px;
+    margin: 0 auto;
+    background-color: #CCF;
+}
+
+header {
+    display: block;
+    text-align: center;
+    background-color: #999;
+}
+
+section#tabular {
+    display: block;
+    background-color: #1EE;
+}
+
+nav#menuizquierda {
+    display: inline-block;
+    width: 24%;
+    min-width: 200px;
+    max-width: 350px;
+    vertical-align: top;
+}
+
+main#panelcentral {
+    display: inline-block;
+    width: 50%;
+    min-width: 200px;
+    min-height: 100px;
+    background-color: white;
+}
+
+aside#panelderecha {
+    display: inline-block;
+    width: 24%;
+    min-width: 200px;
+    max-width: 350px;
+    vertical-align: top;
+}
+
+footer {
+    display: block;
+    background-color: #99F;
+}

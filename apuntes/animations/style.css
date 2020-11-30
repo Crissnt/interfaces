@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* Keyframes */
+@keyframes anim1 {
+    from {
+        background-color: blue;
+        box-shadow: 1px 1px 2px red;
+    }
+    to {
+        background-color: red;
+        box-shadow: 2px 2px 2px blue;
+        transform: translateX(300px) rotate(360deg);
+    }
+}
+
+@keyframes anim2 {
+    from {
+        background-color: blue;
+        box-shadow: 1px 1px 2px red;       
+    }
+    30% {
+        background-color: red;
+        box-shadow: 2px 2px 2px blue; 
+        translate: translateX(300px);
+    }
+    62% {
+        transform: translateX(300px) rotate(360deg);
+    }
+    74% {
+        box-shadow: 2px 2px 6px blue;
+    }
+    66% {
+        box-shadow: 2px 2px 2px yellow;
+    }
+    68% {
+        box-shadow: 2px 2px 2px blue;
+    }
+    100% {
+        transform: translateX(-150px) rotate(-180deg);
+        background-color: greenyellow;
+    }
+}
+
+@keyframes anim3 {
+    0%, 50% {
+        transform: translate(150px);
+        background-color: red;
+    }
+
+    25%, 75% {
+        transform: translate(-150px);
+        background-color: green;
+    }
+    
+    100% {
+        background-color: blue;
+    }
+}
+
+/* Mini animaciones */
+@keyframes anim4a {
+    from {
+        background-color: red;
+    }
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes anim4b {
+    from {}
+    to {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes anim4c {
+    from {
+        transform: translateY(100px);
+        transform: rotate(0deg)
+    }
+    to {
+        transform: translateY(-100px);
+        transform: rotate(360deg);
+    }
+}
+
+section div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+section#s1 div {
+    animation-name: anim1;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+section#s2 div {
+    animation: anim2 5s ease 3 alternate forwards;
+}
+
+section#s3 div {
+    margin 100px;
+    animation: anim3 4s ease 3 alternate forwards;
+    animation-play-state: paused;
+}
+
+section#s3 div:active {
+    animation-play-state: running;
+}
+
+section#s4 div {
+    margin: 100px;
+    background-color: red;
+    animation: anim4a 1.5s ease forwards, anim4b 2s 1.5s ease-out forwards,
+    anim4c 2s 3.5s ease-out infinite forwards;
+}
